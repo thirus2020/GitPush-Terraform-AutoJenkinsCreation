@@ -49,7 +49,7 @@ def get_user(name):
             cache.set(name, data)
             return jsonify({"name": name, "cached": False, "info": data})
         else:
-            return jsonify({"error": f"User '{name}' not found in database"}), 404
+            return jsonify({"error": f"User '{name}' not found in database DB"}), 404
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
